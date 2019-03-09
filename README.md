@@ -40,11 +40,26 @@ https://github.com/trueroad/HaranoAjiFonts
 ## 履歴
 
 * [
+20190309
+](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20190309)
+    + Adobe-Japan1-6 全漢字グリフに対応
+        - 異字体セレクタや OpenType feature には対応していませんので、
+          今回追加されたグリフにアクセスするには
+          CID を直接指定する必要があります。
+    + `BASE`, `VORG`, `vhea`, `vmtx` テーブルを追加
+    + グリフ数
+        - 原ノ味明朝：16425
+        - 原ノ味角ゴシック：16429
+
+* [
 20190303
 ](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20190303)
     + 初版
         - 源ノ明朝 1.001、源ノ角ゴシック 2.000
         - ttx 3.38.0, UniJIS2004-UTF32-H 1.020
+    + グリフ数
+        - 原ノ味明朝：15213
+        - 原ノ味角ゴシック：15215
 
 ## ライセンス / LICENSE
 
