@@ -40,6 +40,20 @@ https://github.com/trueroad/HaranoAjiFonts
 ## 履歴
 
 * [
+20190310
+](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20190310)
+    + 縦書きなどのグリフに対応
+        - OpenType feature `fwid`, `hwid`, `pwid`, `ruby`, `vert`
+          を読み込んで対応付けするグリフを増やしました。
+          ただし OpenType feature そのものには対応していませんので、
+          今回追加されたグリフにアクセスするには
+          CID を直接指定する、 V 系の CMap ファイルを経由する、
+          などの必要があります。
+    + グリフ数
+        - 原ノ味明朝：16678
+        - 原ノ味角ゴシック：16683
+
+* [
 20190309
 ](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20190309)
     + Adobe-Japan1-6 全漢字グリフに対応
