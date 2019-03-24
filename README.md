@@ -30,6 +30,15 @@ https://github.com/trueroad/HaranoAjiFonts
 余裕があるのであれば tag で古いフォントにアクセスできるように
 しておくつもりです。
 
+その他、以下のファイルも配布しています。
+
+* [
+pTeX / pLaTeX 用マップファイル
+](https://github.com/trueroad/HaranoAjiFonts-generator/tree/master/tex/map)
+* [
+各種 TeX 用テストファイル
+](https://github.com/trueroad/HaranoAjiFonts-generator/tree/master/tex)
+
 ## 詳細
 
 詳細は[
@@ -38,6 +47,32 @@ https://github.com/trueroad/HaranoAjiFonts
 をご覧ください。
 
 ## 履歴
+
+* [
+20190324
+](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20190324)
+    + 異字体セレクタ に対応
+        - cmap format 14 を変換するようにしたため
+          異字体セレクタを使うことができるようになりました。
+    + OpenType feature に対応
+        - `GDEF`, `GPOS`, `GSUB` を変換するようにしたため
+          OpenType feature を使うことができるようになりました。
+    + JIS X 0208 グリフに対応
+        - JISX0208-SourceHan-Mapping.txt 2019-03-14
+        - 元々この範囲のグリフには対応できていましたが、
+          マッピングファイルを作っていただいたのでそれを使って
+          生成するようにしました。
+          本件によるグリフ数の増加や変更はありません。
+    + [pTeX / pLaTeX 用マップファイルを配布
+](https://github.com/trueroad/HaranoAjiFonts-generator/tree/20190324/tex/map)
+        - [各種 TeX 用テストファイル
+](https://github.com/trueroad/HaranoAjiFonts-generator/tree/20190324/tex)
+          もあります。
+    + バージョンアップ
+        - ttx 0.39.0
+    + グリフ数
+        - 原ノ味明朝：16678
+        - 原ノ味角ゴシック：16683
 
 * [
 20190310
