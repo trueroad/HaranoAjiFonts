@@ -92,12 +92,13 @@ Japanese TeX Development Community が配布する CMap file
 源ノフォントの文字幅が AJ1 の文字幅に合わなくて、
 強制的に AJ1 に合わせたものがあります
 （AJ1 でプロポーショナル幅とされているグリフは変更していません）。
-単純に幅だけを上書きしたので、
-幅が広くなったグリフは左に寄って見えますし、
-幅が狭くなったグリフは右側がはみ出て後続の文字と重なるなどの現象が発生し、
+さらに、単純に幅を上書きするだけでなく、
+グリフによって中央寄せなどの位置調整を行っていますが、
+幅が広くなったグリフは隙間ができますし、
+幅が狭くなったグリフは左右がはみ出て前後の文字と重なるなどの現象が発生し、
 不格好な表示になることがあります。
 とはいえ、幅としては正しくなっているため、
-後続文字の位置がズレるなるなどといった、組版への影響は発生しません。
+後続文字の位置がズレるなどといった、組版への影響は発生しません。
 以下に該当のグリフを示します。
 
 + ギリシャ文字
@@ -117,7 +118,7 @@ Japanese TeX Development Community が配布する CMap file
 + `✓` AJ1 CID+16270 U+2713 'CHECK MARK'
 
 以下については、源ノフォントでは幅がゼロの合成用グリフですが、
-AJ1 で全角幅の CID に割り当たったため、幅のみ全角幅で上書きしています。
+AJ1 で全角幅の CID に割り当たったため、幅を全角幅で上書きしています。
 そのため、不格好な表示になることがあります。
 
 + AJ1 CID+16328 U+20DD 'COMBINING ENCLOSING CIRCLE'
@@ -171,6 +172,28 @@ futogo-b	H	HaranoAjiGothic-Medium.otf
 ## 履歴
 
 * [
+20200215
+](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20200215)
+    + 横幅を上書きしたグリフについて、中央揃えにするなどの位置調整をしました
+        + [@h20y6m](https://github.com/h20y6m) さんの
+          [#2](https://github.com/trueroad/HaranoAjiFonts-generator/issues/2),
+          [#3](https://github.com/trueroad/HaranoAjiFonts-generator/pull/3)
+          によるものです
+            - Python3 が必要になります
+    + バージョンアップ
+        - ttx 4.3.0, UniJIS2004-UTF32-H 1.021
+            - 前の 20190824 では UniJIS2004-UTF32-H のバージョンが
+              1.020 のまま変わっていない状態でビルドしていました
+            - UniJIS2004-UTF32-H 1.020 から 1.021 への変更により、
+              原ノ味明朝では AJ1 CID+127 が増え、
+              原ノ味角ゴシックでは AJ1 CID+127 が紐づくグリフが変更
+              （AI0 CID+253 から AI0 CID+247）になっています
+    + グリフ数
+        - 原ノ味明朝：16679
+        - 原ノ味角ゴシック：16684
+        - 上記 UniJIS2004-UTF32-H のアップデートに伴い、
+          原ノ味明朝で 1 グリフ増えています
+* [
 20190824
 ](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20190824)
     + グリフの横幅を AJ1 の定義に従うようにしました
@@ -187,7 +210,8 @@ futogo-b	H	HaranoAjiGothic-Medium.otf
         + AJ1-7 の GSUB 情報が公開されたので、
           それを利用するようにしました。
     + バージョンアップ
-        - ttx 4.0.0, UniJIS2004-UTF32-H 1.021
+        - ttx 4.0.0, ~~UniJIS2004-UTF32-H 1.021~~
+            - UniJIS2004-UTF32-H は 1.020 のままでした（20200215 追記）
     + グリフ数
         - 原ノ味明朝：16678
         - 原ノ味角ゴシック：16684
@@ -313,7 +337,8 @@ futogo-b	H	HaranoAjiGothic-Medium.otf
 
 ## ライセンス / LICENSE
 
-Copyright (C) 2019 Masamichi Hosoda, with Reserved Font Name 'Harano Aji'.
+Copyright (C) 2019, 2020
+Masamichi Hosoda, with Reserved Font Name 'Harano Aji'.
 
 Copyright 2014, 2015, 2018 Adobe (http://www.adobe.com/),
 with Reserved Font Name 'Source'.
