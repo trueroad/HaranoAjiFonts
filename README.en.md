@@ -72,7 +72,7 @@ for details.
         - ttx 4.7.0
     + Number of contained glyphs
         - HaranoAjiMincho: 16684
-        - HaranoAjiGothic: 16685
+        - HaranoAjiGothic: 16689
 * [
 20200215
 ](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20200215)
