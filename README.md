@@ -1,13 +1,15 @@
 <!-- -*- coding: utf-8 -*- -->
 # 原ノ味フォント / Harano Aji Fonts
 
+[ Japanese （日本語） / [English](README.en.md) ]
+
 源ノ明朝・源ノ角ゴシック（以下、源ノフォント）を
 Adobe-Japan1 （以下、AJ1）フォントになるように組み替えた
 「原ノ味フォント（原ノ味明朝、原ノ味角ゴシック）」
 を作ってみました。
 CID の対応がとれないため抜けてしまうグリフがありますが、
 素の pTeX / pLaTeX で和文フォントとして使う分には
-ほぼすべてのグリフが揃っています。
+すべてのグリフが揃っています。
 
 「原ノ味」というのは、
 源ノフォントからグリフやテーブルが抜けていることを表すために
@@ -17,27 +19,54 @@ AJ1 をもじって AJI にして
 
 ## フォントファイルの配布
 
-原ノ味フォントは
-[
+* 原ノ味フォントの配布
+    - TeX Live
+        - TeX Live 2020 以降に含まれており、
+          （ごく一部のエンジンを除き）和文のデフォルトフォントになっています
+        - TeX Live 2019 では 2020 年 2 月中旬以降の更新に含まれています
+          （デフォルトフォントではありません）
+    - W32TeX
+        - 2020 年 3 月 23 日以降に含まれています
+    - CTAN
+        - 主要 7 フォント（各種 TeX 用プリセット設定で使うウェイト）
+            - [
+https://www.ctan.org/pkg/haranoaji
+](https://www.ctan.org/pkg/haranoaji)
+        - 追加 7 フォント（プリセットでは使わないウェイト）
+            - [
+https://www.ctan.org/pkg/haranoaji-extra
+](https://www.ctan.org/pkg/haranoaji-extra)
+    - GitHub
+        - [
 https://github.com/trueroad/HaranoAjiFonts
 ](https://github.com/trueroad/HaranoAjiFonts)
-で配布しています。
+
 フォントファイルはサイズが大き目で、全 14 フォントあるため、
 リポジトリの容量が大きくなりがちと考えており、
-古いバージョンのフォントは随時消していきたいと思っています。
+GitHub では古いバージョンのフォントは随時消していきたいと思っています。
 そのため、新しいフォントをリリースする際には
-上記リポジトリの master ブランチを forced update する運用にし、
+master ブランチを forced update する運用にし、
 余裕があるのであれば tag で古いフォントにアクセスできるように
 しておくつもりです。
 
 その他、以下のファイルも配布しています。
 
 * [
-pTeX / pLaTeX 用マップファイル
-](https://github.com/trueroad/HaranoAjiFonts-generator/tree/master/tex/map)
-* [
-各種 TeX 用テストファイル
+各種 TeX ファイル
 ](https://github.com/trueroad/HaranoAjiFonts-generator/tree/master/tex)
+    + ドキュメント、サンプル、テストファイルなど
+* fontspec 用ファイル
+    + [
+HaranoAjiMincho.fontspec
+](https://github.com/trueroad/HaranoAjiFonts-generator/tree/master/tex/HaranoAjiMincho.fontspec),
+      [
+HaranoAjiGothic.fontspec
+](https://github.com/trueroad/HaranoAjiFonts-generator/tree/master/tex/HaranoAjiGothic.fontspec)
+    + `luatexja-preset` などのプリセット設定を使う場合は不要です
+
+pTeX / pLaTeX 用マップファイルは
+[ptex-fontmaps](https://www.ctan.org/pkg/ptex-fontmaps)
+20200217.0 以降に入っています。
 
 詳細は[
 原ノ味フォント生成プログラム
@@ -55,47 +84,38 @@ AJ1 への対応が取れたものを搭載します。
             + これは AJ1 の「漢字グリフ」範囲外で漢字扱いではありません。
     + JIS X 0208、JIS X 0213 の全漢字グリフを搭載
 * 非漢字（ひらがな、カタカナ、英数字、記号類など）
-    + JIS X 0208 横書きグリフはすべて搭載
-        + JIS90 字形（CMap file `H` を使った場合）すべて搭載
-        + JIS2004 字形（CMap file `2004-H` を使った場合）すべて搭載
-    + JIS X 0208 縦書きグリフは以下の 4 グリフを除きすべて搭載
-        + JIS90 字形（CMap file `V` を使った場合）
-            + `‖` 01-34 U+2016 'DOUBLE VERTICAL LINE'
-              (AJ1 CID+7895)
-        + JIS2004 字形（CMap file `2004-V` を使った場合）
-            + `‖` 01-34 U+2016 'DOUBLE VERTICAL LINE'
-              (AJ1 CID+7895)
-            + `°` 01-75 U+00B0 'DEGREE SIGN'
-              (AJ1 CID+8269)
-            + `′` 01-76 U+2032 'PRIME'
-              (AJ1 CID+8273)
-            + `″` 01-77 U+2033 'DOUBLE PRIME'
-              (AJ1 CID+8283)
+    + JIS X 0208 横書きグリフすべて搭載
+    + JIS X 0208 縦書きグリフすべて搭載（20200418 版以降）
     + JIS X 0213 の非漢字グリフには抜けているものがあります。
     + その他 Adobe-Japan1-6 非漢字グリフには抜けているものがあります。
 
+以下の縦書きグリフは、横書きグリフを加工したものを搭載しています
+（20200418 版以降）。
+
+* `‖` AJ1 CID+7895 U+2016 'DOUBLE VERTICAL LINE'
+    + AJ1 CID+666 を右90度回転
+* `°` AJ1 CID+8269 U+00B0 'DEGREE SIGN'
+    + AJ1 CID+707 を平行移動
+* `′` AJ1 CID+8273 U+2032 'PRIME'
+    + AJ1 CID+708 を平行移動
+* `″` AJ1 CID+8283 U+2033 'DOUBLE PRIME'
+    + AJ1 CID+709 を平行移動
+* `✂` AJ1 CID+12178 U+2702 'BLACK SCISSORS'
+    + AJ1 CID+12176 を右90度回転
+
 抜けているグリフのCIDにはダミーグリフ
 （.notdef と同じで四角の中に×が入ったような形）が入っています。
-上記で具体的に記載した非搭載グリフ（ルビ 1 グリフ、非漢字縦書き 4 グリフ）は
-いずれも源ノフォントが搭載していないため原ノ味フォントに搭載できないものです。
-`H`, `V` は[
-Adobe が配布する CMap file
-](https://github.com/adobe-type-tools/cmap-resources)
-で、TeX Live などにも含まれています。
-`2004-H`, `2004-V` は[
-Japanese TeX Development Community が配布する CMap file
-（のようなもの）
-](https://github.com/texjporg/jfontmaps/tree/master/cmap)
-で、TeX Live にも含まれています。
+そのほとんどは
+源ノフォントが搭載していないため原ノ味フォントに搭載できないものです。
 
 非漢字の搭載グリフの一部で、
 源ノフォントの文字幅が AJ1 の文字幅に合わなくて、
-強制的に AJ1 に合わせたものがあります
-（AJ1 でプロポーショナル幅とされているグリフは変更していません）。
+強制的に AJ1 に合わせたものがあります（20190824 版以降）。
+AJ1 でプロポーショナル幅とされているグリフは変更していません。
 さらに、単純に幅を上書きするだけでなく、
-グリフによって中央寄せなどの位置調整を行っていますが、
-幅が広くなったグリフは隙間ができますし、
-幅が狭くなったグリフは左右がはみ出て前後の文字と重なるなどの現象が発生し、
+グリフによって中央寄せなどの位置調整を行いました（20200215 版以降）。
+このため、幅が広くなったグリフは隙間ができたり、
+幅が狭くなったグリフは左右がはみ出て前後の文字と重なるなどの現象が発生したり、
 不格好な表示になることがあります。
 とはいえ、幅としては正しくなっているため、
 後続文字の位置がズレるなどといった、組版への影響は発生しません。
@@ -118,12 +138,18 @@ Japanese TeX Development Community が配布する CMap file
 + `✓` AJ1 CID+16270 U+2713 'CHECK MARK'
 
 以下については、源ノフォントでは幅がゼロの合成用グリフですが、
-AJ1 で全角幅の CID に割り当たったため、幅を全角幅で上書きしています。
+AJ1 で全角幅の CID に割り当たったため、
+幅を全角幅で上書きし（20190824 版以降）位置調整をし（20200215 版以降）
+他の AJ1 フォントと同じような位置になるよう再調整しました（20200418 版以降）。
 そのため、不格好な表示になることがあります。
 
 + AJ1 CID+16328 U+20DD 'COMBINING ENCLOSING CIRCLE'
 + AJ1 CID+11035 U+20DE 'COMBINING ENCLOSING SQUARE'
-    + AJ1 CID+11035 は原ノ味明朝は未搭載、原ノ味角ゴシックのみ搭載
+    + CID+11035 は、
+      原ノ味角ゴシックのみ幅ゼロの合成用グリフが割り当たったため
+      全角幅で上書きおよび位置調整を実施し、
+      原ノ味明朝は全角幅グリフが割り当たったため
+      幅上書きや位置調整をしていません
 + AJ1 CID+16326 U+3099 'COMBINING KATAKANA-HIRAGANA VOICED SOUND MARK'
 + AJ1 CID+16327 U+309A 'COMBINING KATAKANA-HIRAGANA SEMI-VOICED SOUND MARK'
 
@@ -133,24 +159,31 @@ AJ1 で全角幅の CID に割り当たったため、幅を全角幅で上書�
 ## pTeX / pLaTeX
 
 源ノフォントと異なり比較的簡単に使うことができます。
-フォントファイルとマップファイルを適切に配置すれば普通に使えます。
+TeX Live 2020 以降ではデフォルトフォントになっているので、
+何もしなくてもそのままで使えます。
 ただし搭載しない（抜けている）グリフを使うことはできません。
 
 * OTF パッケージを使わない場合
-    + JIS90 字形（マップファイル `ptex-haranoaji.map` を使った場合）
-        + 横書きは全グリフ使えます。
-        + 縦書きは 1 グリフ `‖` だけ使えません。
-    + JIS2004 字形（マップファイル `ptex-haranoaji-04.map` を使った場合）
-        + 横書きは全グリフ使えます。
-        + 縦書きは 4 グリフ `‖`, `°`, `′`, `″` 使えません。
+    + JIS90 字形 / JIS2004 字形、横書き / 縦書き、
+      いずれの組み合わせでも全グリフ使えます（20200418 版以降）。
 * OTF パッケージを使う場合
-    + Adobe-Japan1-6 全漢字グリフから 1 グリフを除き CID 直接指定などで
+    + Adobe-Japan1-6 全漢字グリフから CID 直接指定などで
       呼び出すことができます。
-        + AJ1 CID+12869 （「注」の異字体）だけ使えません。
+        + AJ1 CID+12869 （ルビ用の「注」）は使えません。
     + 非漢字（ひらがな、カタカナ、英数字、記号類など）には
       使えないグリフもあります。
 
 詳細は「搭載グリフ」も参照してください。
+
+TeX Live をお使いの場合、
+[ptex-fontmaps](https://www.ctan.org/pkg/ptex-fontmaps)
+が 20200217.0 以降になっていて sodo で管理者権限が使えるなら、
+
+```
+$ sudo kanji-config-updmap-sys --jis2004 haranoaji
+```
+
+のようにすることで原ノ味フォントに切り替わります。
 
 ### ipsj.cls
 
@@ -171,6 +204,46 @@ futogo-b	H	HaranoAjiGothic-Medium.otf
 
 ## 履歴
 
+* [
+20200418
+](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20200418)
+    + 縦書き用 5 グリフを追加しました
+        + 素の pTeX で使用できるすべてのグリフが揃いました
+        + いずれも横書き用のグリフを加工（右90度回転または平行移動）
+          したものです
+            + `‖` AJ1 CID+7895 U+2016 'DOUBLE VERTICAL LINE'
+            + `°` AJ1 CID+8269 U+00B0 'DEGREE SIGN'
+            + `′` AJ1 CID+8273 U+2032 'PRIME'
+            + `″` AJ1 CID+8283 U+2033 'DOUBLE PRIME'
+            + `✂` AJ1 CID+12178 U+2702 'BLACK SCISSORS'
+    + ファイルサイズを低減しました
+        + 14フォント合計で 79.1 MBから 72.3 MB になり 6.8 MB （約 9 %）減
+        + CharString でダミーグリフを展開せず、
+          サブルーチン呼び出しに変更したことによります
+    + 2グリフの描画位置を再調整しました
+        + 20200215 版では位置調整の結果ボックス内右上隅に寄っていましたが、
+          他の AJ1 フォントではボックス内左上隅に寄っていたため再調整しました
+            + AJ1 CID+16326 U+3099
+              'COMBINING KATAKANA-HIRAGANA VOICED SOUND MARK'
+            + AJ1 CID+16327 U+309A
+              'COMBINING KATAKANA-HIRAGANA SEMI-VOICED SOUND MARK'
+    + 位置調整したグリフの LSB （左サイドベアリング）を修正しました
+        + 20200215 版では、位置調整したグリフについて `hmtx` テーブルの
+          LSB も修正すべきでしたが、していませんでした
+        + 平行移動や回転したグリフも合わせて LSB と
+          `vmtx` テーブルの TSB （上サイドベアリング）
+          を計算して修正するようにしました
+    + 幅上書き・位置調整したグリフを `GPOS` テーブルから取り除きました
+        + 20190824 版で幅上書き、20200215 版で位置調整したグリフが、
+          `GPOS` テーブルに上書き・調整前のパラメータのまま残っていたため、
+          OpenType feature の指定によっては位置がおかしくなることがありました
+        + `GPOS` テーブルから削除したので問題なくなりました
+    + バージョンアップ
+        - ttx 4.7.0
+    + グリフ数
+        - 原ノ味明朝：16684
+        - 原ノ味角ゴシック：16689
+        - 上記 5 グリフ追加に伴い増加しています
 * [
 20200215
 ](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20200215)
