@@ -177,7 +177,7 @@ TeX Live 2020 以降ではデフォルトフォントになっているので、
 
 TeX Live をお使いの場合、
 [ptex-fontmaps](https://www.ctan.org/pkg/ptex-fontmaps)
-が 20200217.0 以降になっていて sodo で管理者権限が使えるなら、
+が 20200217.0 以降になっていて sudo で管理者権限が使えるなら、
 
 ```
 $ sudo kanji-config-updmap-sys --jis2004 haranoaji
