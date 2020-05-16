@@ -157,7 +157,16 @@ for details.
 
 ## LICENSE
 
-Copyright (C) 2019, 2020 Masamichi Hosoda
+Copyright (C) 2019, 2020
+Masamichi Hosoda, with Reserved Font Name 'Harano Aji'.
 
-The license of the generator is BSD 2-Clause. See [LICENSE](./LICENSE).
-The license of the generated fonts is SIL Open Font License 1.1.
+Copyright 2014, 2015, 2018 Adobe (http://www.adobe.com/),
+with Reserved Font Name 'Source'.
+
+Copyright 2017 Adobe Systems Incorporated (http://www.adobe.com/),
+with Reserved Font Name 'Source'.
+
+Source is a trademark of Adobe in the United States and/or other countries.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+See [LICENSE](LICENSE).
