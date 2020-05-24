@@ -53,6 +53,26 @@ Map files for pTeX / pLaTeX are contained in
 [ptex-fontmaps](https://www.ctan.org/pkg/ptex-fontmaps)
 20200217.0 or later.
 
+There are **experimentally** generated Simplified Chinese,
+Traditional Chinese, and Korean fonts.
+
+* (Experimental) Simplified Chinese (CN): Adobe-GB1
+    + [
+https://github.com/trueroad/HaranoAjiFontsCN
+](https://github.com/trueroad/HaranoAjiFontsCN)
+* (Experimental) Traditional Chinese (TW): Adobe-CNS1
+    + [
+https://github.com/trueroad/HaranoAjiFontsTW
+](https://github.com/trueroad/HaranoAjiFontsTW)
+* (Experimental) Korean (KR): Adobe-KR
+    + [
+https://github.com/trueroad/HaranoAjiFontsKR
+](https://github.com/trueroad/HaranoAjiFontsKR)
+* (Experimental) Korean (K1): Adobe-Korea1
+    + [
+https://github.com/trueroad/HaranoAjiFontsK1
+](https://github.com/trueroad/HaranoAjiFontsK1)
+
 See [
 Harano Aji Fonts generator
 ](https://github.com/trueroad/HaranoAjiFonts-generator)
@@ -60,6 +80,41 @@ for details.
 
 ## Release Notes
 
+* [
+20200524
+](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20200524)
+(JP, CN, TW, KR, K1)
+    + Add proportional Kana glyphs (JP)
+    + Add some space glyphs (JP, KR)
+    + Fix broken `GPOS` table such as palt (JP, CN, TW, KR)
+    + Change width of Monospaced glyphs in **experimental** Korean font (KR)
+    + Add **experimental** Korean font variation (K1)
+        + Korean: Adobe-Korea1, suffix K1
+            + UniKS-UTF32-H 1.008
+    + Update
+        + ttx 4.10.2
+    + Number of contained glyphs (JP)
+        - HaranoAjiMincho: 16887
+          (conversion 16678 + glyph processing 208 + .notdef 1)
+        - HaranoAjiGothic: 16892
+          (conversion 16683 + glyph processing 208 + .notdef 1)
+* 20200516 (CN, TW, KR)
+    + The generator can now generate **experimental**
+      Simplified Chinese, Traditional Chinese, and Korean fonts.
+    + The font name for each langulage has the two letter suffix
+      same as Source Han fonts.
+        + Simplified Chinese: Adobe-GB1, suffix CN
+            + UniGB-UTF32-H 1.016
+        + Traditional Chinese: Adobe-CNS1, suffix TW
+            + UniCNS-UTF32-H 1.019
+        + Korean: Adobe-KR, suffix KR
+            + UniAKR-UTF32-H 1.002
+    + No change for Japanese version, no release this time.
+    + The suffix is used as an abbreviation for each language font.
+        + The Japanese font name has no suffix,
+          but the abbreviation is JP.
+    + Update
+        - ttx 4.10.0
 * [
 20200418
 ](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20200418)

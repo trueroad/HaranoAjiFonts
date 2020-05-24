@@ -68,6 +68,25 @@ pTeX / pLaTeX 用マップファイルは
 [ptex-fontmaps](https://www.ctan.org/pkg/ptex-fontmaps)
 20200217.0 以降に入っています。
 
+**実験的**に生成した中国語簡体字、中国語繁体字、韓国語フォントがあります。
+
+* （実験的）中国語簡体字 (CN)：Adobe-GB1 対応
+    + [
+https://github.com/trueroad/HaranoAjiFontsCN
+](https://github.com/trueroad/HaranoAjiFontsCN)
+* （実験的）中国語繁体字 (TW)：Adobe-CNS1 対応
+    + [
+https://github.com/trueroad/HaranoAjiFontsTW
+](https://github.com/trueroad/HaranoAjiFontsTW)
+* （実験的）韓国語 (KR)：Adobe-KR 対応
+    + [
+https://github.com/trueroad/HaranoAjiFontsKR
+](https://github.com/trueroad/HaranoAjiFontsKR)
+* （実験的）韓国語 (K1)：Adobe-Korea1 対応
+    + [
+https://github.com/trueroad/HaranoAjiFontsK1
+](https://github.com/trueroad/HaranoAjiFontsK1)
+
 詳細は[
 原ノ味フォント生成プログラム
 ](https://github.com/trueroad/HaranoAjiFonts-generator)
@@ -153,6 +172,9 @@ AJ1 で全角幅の CID に割り当たったため、
 + AJ1 CID+16326 U+3099 'COMBINING KATAKANA-HIRAGANA VOICED SOUND MARK'
 + AJ1 CID+16327 U+309A 'COMBINING KATAKANA-HIRAGANA SEMI-VOICED SOUND MARK'
 
+原ノ味フォント 20200524 からプロポーショナルかなを搭載しています。
+源ノフォントの palt に従って幅と位置を調整したものです。
+
 また、ダミーグリフは全角幅ですが、
 これも AJ1 の文字幅で上書きしています。
 
@@ -204,6 +226,42 @@ futogo-b	H	HaranoAjiGothic-Medium.otf
 
 ## 履歴
 
+* [
+20200524
+](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20200524)
+(JP, CN, TW, KR, K1)
+    + プロポーショナルかなのグリフを追加しました (JP)
+    + 一部のスペースグリフを追加しました (JP, KR)
+    + palt などの `GPOS` テーブルが壊れていたのを修正しました (JP, CN, TW, KR)
+    + **実験的な**韓国語フォントで Monospaced グリフの幅を変更しました (KR)
+    + **実験的に**韓国語フォントのバリエーションを追加しました (K1)
+    + これまで Adobe-KR 対応でサフィックス KR のフォントがありましたが、
+      Adobe-Korea1 対応でサフィックス K1 のフォントを追加しました
+        + 韓国語：Adobe-Korea1 対応、サフィックス K1
+            + UniKS-UTF32-H 1.008
+    + バージョンアップ
+        - ttx 4.10.2
+    + グリフ数 (JP)
+        - 原ノ味明朝：16887
+          （変換 16678 ＋グリフ加工 208 ＋ .notdef 1）
+        - 原ノ味角ゴシック：16892
+          （変換 16683 ＋グリフ加工 208 ＋ .notdef 1）
+* 20200516 (CN, TW, KR)
+    + **実験的に**中国語簡体字、中国語繁体字、韓国語フォントを
+      生成できるようにしました
+    + 各言語版のフォント名は、サフィックスにベースとした源ノフォントと同じ
+      アルファベット 2 文字を付けています
+        + 中国語簡体字：Adobe-GB1 対応、サフィックス CN
+            + UniGB-UTF32-H 1.016
+        + 中国語繁体字：Adobe-CNS1 対応、サフィックス TW
+            + UniCNS-UTF32-H 1.019
+        + 韓国語：Adobe-KR 対応、サフィックス KR
+            + UniAKR-UTF32-H 1.002
+    + 日本語は変更なし、今回のリリースもありません
+    + 今後は各言語版の略称にサフィックスを使います
+        + 日本語版はフォント名にサフィックスありませんが略称 JP とします
+    + バージョンアップ
+        - ttx 4.10.0
 * [
 20200418
 ](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20200418)
