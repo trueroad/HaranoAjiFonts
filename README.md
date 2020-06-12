@@ -227,6 +227,34 @@ futogo-b	H	HaranoAjiGothic-Medium.otf
 ## 履歴
 
 * [
+20200612
+](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20200612)
+(JP, CN, TW, KR, K1)
+    + `cmap` テーブルが AJ1 などの CMap と比較して不足しているところを追加、
+      食い違っていたところを修正しました
+      (JP, CN, TW, KR, K1)
+        + これにより `cmap` テーブルに U+FF0D 'FULLWIDTH HYPHEN-MINUS'
+          が搭載されていない[
+問題
+](https://github.com/trueroad/HaranoAjiFonts/issues/4)が修正されました
+        + これまでと同じくグリフを搭載していない（ダミーグリフの）
+          CID に紐づく Unicode コードポイントは `cmap` に搭載していません
+    + AJ1 CID+151 を AJ1 CID+14 からのコピーで追加しました (JP)
+    + `cmap` テーブル format 4 がサイズ制限を超える場合の対策を変更しました
+      (TW, KR)
+    + `GPOS` テーブルを搭載しました (KR)
+    + 生成プログラムの改良をしました
+        + 各フォントの生成をシェルスクリプトから make に変更しました
+        + ビルドディレクトリ、ログファイル、中間ファイルの名称を変更しました
+    + バージョンアップ
+        + ttx 4.12.0
+    + グリフ数 (JP)
+        + 原ノ味明朝：16888
+          （変換 16678 ＋グリフ加工 209 ＋ .notdef 1）
+        + 原ノ味角ゴシック：16893
+          （変換 16683 ＋グリフ加工 209 ＋ .notdef 1）
+        + 上記 1 グリフ追加に伴い増加しています
+* [
 20200524
 ](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20200524)
 (JP, CN, TW, KR, K1)
