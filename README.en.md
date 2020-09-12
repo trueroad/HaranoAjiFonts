@@ -81,6 +81,19 @@ for details.
 ## Release Notes
 
 * [
+20200912
+](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20200912)
+(JP)
+    + Add glyphs that don't have a single Unicode code point
+      and are accessible only by ligature substitute in the `GSUB` table (JP)
+    + Update
+        + ttx 4.14.0
+    + Number of contained glyphs (JP)
+        - HaranoAjiMincho: 16904
+          (conversion 16693 + glyph processing 210 + .notdef 1)
+        - HaranoAjiGothic: 16909
+          (conversion 16698 + glyph processing 210 + .notdef 1)
+* [
 20200612
 ](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20200612)
 (JP, CN, TW, KR, K1)

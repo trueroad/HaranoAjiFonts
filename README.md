@@ -227,6 +227,29 @@ futogo-b	H	HaranoAjiGothic-Medium.otf
 ## 履歴
 
 * [
+20200912
+](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20200912)
+(JP)
+    + [
+小書きの「プ」
+](https://twitter.com/zr_tex8r/status/1303694108465135616)、
+半濁点のか行、カ行、「セ」、「ツ」、「ト」のグリフを追加しました
+        + 小書きの「プ」は、縦書き用と pwid （加工）も追加しています
+        + これは[単独の Unicode コードポイントを持たず、
+リガチャ置き換えのみでアクセス可能な
+CID](https://twitter.com/trueroad_jp/status/1304001557822730241)
+の変換に対応したことによるものです
+        + この対応で JP 以外はグリフ変更ありませんでした
+    + バージョンアップ
+        + ttx 4.14.0
+    + グリフ数 (JP)
+        + 原ノ味明朝：16904
+          （変換 16693 ＋グリフ加工 210 ＋ .notdef 1）
+        + 原ノ味角ゴシック：16909
+          （変換 16698 ＋グリフ加工 210 ＋ .notdef 1）
+        + 上記により、変換 15 グリフ、加工 1 グリフ、
+          計 16 グリフ増加しています
+* [
 20200612
 ](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20200612)
 (JP, CN, TW, KR, K1)
