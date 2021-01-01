@@ -81,6 +81,21 @@ for details.
 ## Release Notes
 
 * [
+20210101
+](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20210101)
+(JP, CN, TW, KR, K1)
+    + Based on SourceHanSans 2.002 (JP, CN, TW, KR, K1)
+    + Add many Kana glyphs (JP)
+    + Add many GSUB features and entries (JP)
+    + Update
+        + SourceHanSans 2.002
+        + ttx 4.18.2
+    + Number of contained glyphs (JP)
+        - HaranoAjiMincho: 17554
+          (conversion 16862 + glyph processing 691 + .notdef 1)
+        - HaranoAjiGothic: 17559
+          (conversion 16867 + glyph processing 691 + .notdef 1)
+* [
 20200912
 ](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20200912)
 (JP)
@@ -243,10 +258,10 @@ for details.
 
 ## LICENSE
 
-Copyright (C) 2019, 2020
+Copyright (C) 2019-2021
 Masamichi Hosoda, with Reserved Font Name 'Harano Aji'.
 
-Copyright 2014, 2015, 2018 Adobe (http://www.adobe.com/),
+Copyright 2014-2020 Adobe (http://www.adobe.com/),
 with Reserved Font Name 'Source'.
 
 Copyright 2017 Adobe Systems Incorporated (http://www.adobe.com/),
