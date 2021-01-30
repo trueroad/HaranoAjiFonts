@@ -81,6 +81,21 @@ for details.
 ## Release Notes
 
 * [
+20210130
+](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20210130)
+(JP)
+    + Fix GPOS vpal feature for vertical Kana glyphs
+    + Fix GSUB vkna feature from [fixing Adobe-Japan1-7
+GSUB feature](https://github.com/adobe-type-tools/Adobe-Japan1/pull/4)
+    + Update
+        + ttx 4.19.1
+        + aj17-gsub-jp04.fea (2021-01-25)
+    + Number of contained glyphs (JP)
+        - HaranoAjiMincho: 17554
+          (conversion 16862 + glyph processing 691 + .notdef 1)
+        - HaranoAjiGothic: 17559
+          (conversion 16867 + glyph processing 691 + .notdef 1)
+* [
 20210102
 ](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20210102)
 (JP)
