@@ -315,6 +315,30 @@ futogo-b	H	HaranoAjiGothic-Medium.otf
 ## 履歴
 
 * [
+20210410
+](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20210410)
+(JP, CN, TW, KR, K1)
+    + 源ノ角ゴシック 2.003 に対応 (JP, CN, TW, KR, K1)
+        - ベースとなる源ノ角ゴシックを 2.002 から 2.003 に変更しました。
+        - 源ノ角ゴシック 2.003 では
+          U+4E08 U+E0101（AJ1 CID+13463相当）の
+          グリフ（グリフ名uni4E08uE0101-JP）がなくなりました。
+          これは U+4E08（丈、AJ1 CID+2510相当）の
+          グリフ（グリフ名uni4E08-CN）と統合されたものと思われます。
+          これらは源ノ明朝ではヒゲの有無が異なるグリフですが、
+          源ノ角ゴシック 2.002 ではどちらもヒゲ無しのよく似たグリフでした。
+          そこで、原ノ味角ゴシックでは CID+2510 を CID+13463 へコピーする
+          ことにしました。原ノ味明朝ではこれまで通り変更ありません。
+    + バージョンアップ
+        + 源ノ角ゴシック 2.003
+        + ttx 4.22.0
+    + グリフ数 (JP)
+        + 原ノ味明朝：17554
+          （変換 16862 ＋グリフ加工 691 ＋ .notdef 1）
+        + 原ノ味角ゴシック：17559
+          （変換 16866 ＋グリフ加工 692 ＋ .notdef 1）
+        + 上記により原ノ味角ゴシックで変換 1 減、加工 1 増です
+* [
 20210130
 ](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20210130)
 (JP)
@@ -742,7 +766,7 @@ CID](https://twitter.com/trueroad_jp/status/1304001557822730241)
 Copyright (C) 2019-2021
 Masamichi Hosoda, with Reserved Font Name 'Harano Aji'.
 
-Copyright 2014-2020 Adobe (http://www.adobe.com/),
+Copyright 2014-2021 Adobe (http://www.adobe.com/),
 with Reserved Font Name 'Source'.
 
 Copyright 2017 Adobe Systems Incorporated (http://www.adobe.com/),
