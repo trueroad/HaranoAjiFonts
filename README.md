@@ -101,6 +101,16 @@ AJ1 への対応が取れたものを搭載します。
     + Adobe-Japan1-6 漢字グリフはすべて搭載
         + \<U+6CE8 U+E0102\> (AJ1 CID+12869) ルビ用の「注」は非搭載
             + これは AJ1 の「漢字グリフ」範囲外で漢字扱いではありません。
+        + 試験的リリースの原ノ味明朝 20211103 は
+          CID+13729
+          （U+2EA9 "⺩" / \<U+738B U+E0101\> "王󠄁" --- "王" の異体字）,
+          CID+14019
+          （\<U+5305 U+E0101\> "包󠄁" --- "包" の異体字）
+          が欠けています。
+            + これは[
+源ノ明朝 2.000 JP 版で 2 グリフが欠けている問題
+](https://github.com/adobe-fonts/source-han-serif/issues/125)
+              によるものです。
     + JIS X 0208、JIS X 0213 の全漢字グリフを搭載
 * 非漢字（ひらがな、カタカナ、英数字、記号類など）
     + JIS X 0208 横書きグリフすべて搭載
@@ -314,6 +324,86 @@ futogo-b	H	HaranoAjiGothic-Medium.otf
 
 ## 履歴
 
+* [
+20211103
+](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20211103)
+(JP, CN, TW, KR, K1) 試験的リリース
+    + 本バージョンは試験的リリースです
+        - 源ノ明朝のメジャーバージョンアップにより大幅な変更があります。
+        - JP: CID+13729, CID+14019 が欠けています（詳細は下記参照）。
+        - その他にも大幅な変更があるようなので、
+          試験的にお使いいただいておかしなところなどをご指摘いただけると
+          助かります。
+        - CTAN （や TeX Live）へのアップロードはしません。
+    + 源ノ明朝 2.000 に対応 (JP, CN, TW, KR, K1)
+        - ベースとなる源ノ明朝を 1.001 から 2.000 に変更しました。
+        - JP: [
+源ノ明朝 2.000 JP 版で 2 グリフが欠けている問題
+](https://github.com/adobe-fonts/source-han-serif/issues/125)
+          により
+          CID+13729
+          （U+2EA9 "⺩" / \<U+738B U+E0101\> "王󠄁" --- "王" の異体字）,
+          CID+14019
+          （\<U+5305 U+E0101\> "包󠄁" --- "包" の異体字）
+          が欠けています。
+          本件修正は源ノ明朝の次期バーションで修正されるのを待つつもりです。
+        - JP: [
+源ノ明朝 2.000 で aj16-kanji.txt が更新されていない問題
+](https://github.com/adobe-fonts/source-han-serif/pull/123)
+          については源ノ明朝の次期バージョンで修正されるのを待たず、
+          原ノ味での修正を試みました（[
+その 1
+](https://github.com/trueroad/HaranoAjiFonts-generator/commit/aac4c985b3dee9ced9670ad04439e1c0cfa35310)
+          , [
+その 2
+](https://github.com/trueroad/HaranoAjiFonts-generator/commit/5f3ba45054b612c82b5a25fee293ac84a4d6badd)
+          ）が、不十分である可能性が残っています。
+        - JP: [
+源ノ明朝 2.000 でマッピングに誤りがある問題
+](https://github.com/adobe-fonts/source-han-serif/issues/126)
+          については原ノ味で修正しています（[
+その 1
+](https://github.com/trueroad/HaranoAjiFonts-generator/commit/778f5afbda5adf259088d30459f7e2dd6d873e91)
+          , [
+その 2
+](https://github.com/trueroad/HaranoAjiFonts-generator/commit/eb40dc384ce4d4f42363899ad02e25cda2e159b3)
+          ）。
+    + 源ノ角ゴシック 2.004 に対応 (JP, CN, TW, KR, K1)
+        - ベースとなる源ノ角ゴシックを 2.003 から 2.004 に変更しました。
+    + 明朝・ゴシックともに設定ミスで CID+515 （半角ひらがなスペース）を
+      搭載していなかったのを[
+修正しました
+](https://github.com/trueroad/HaranoAjiFonts-generator/commit/f821f1b05ae9768bcdc9b991e5a9790e3bfa7c9c)
+      。 (JP)
+    + \<U+884B U+E0101\>
+      （"衋󠄁" --- "衋" の異体字）で選択される CID
+      が誤っているのを修正しました。上記マッピング誤りの修正に関連します。
+      (JP)
+    + 生成に JIS X 0208 マッピングを[
+使用しないようにしました
+](https://github.com/trueroad/HaranoAjiFonts-generator/commit/056b398ed30a0be0f5c3948f45dde4c50c2e04d3)
+      。 (JP)
+    + HaranoAjiSerifTW で `cmap` テーブル format4 がサイズ超過したため[
+対策を追加しました
+](https://github.com/trueroad/HaranoAjiFonts-generator/commit/5815efc124dc688f628cca62eff6491fe7f914b8)
+      。 (TW)
+    + バージョンアップ
+        + 源ノ明朝 2.000
+        + 源ノ角ゴシック 2.004
+        + ttx 4.27.1
+    + グリフ数 (JP)
+        + 原ノ味明朝：17557
+          （変換 16865 ＋グリフ加工 691 ＋ .notdef 1）
+        + 原ノ味角ゴシック：17559
+          （変換 16866 ＋グリフ加工 692 ＋ .notdef 1）
+        + 原ノ味フォント 20200524 から 20210410 まで CID+515 ミスの影響で、
+          グリフ総数および加工数を 1 つ余計にカウントしていました。
+          カウント方法を改良しました。
+        + 原ノ味明朝は上記 2 グリフ欠け以外は
+          原ノ味ゴシックと同等になりました。
+        + 原ノ味角ゴシックは CID+515 搭載により加工 1 増ですが、
+          原ノ味角ゴシック 20200524 以降で余計にカウントしていたため
+          数字上は増えていません。
 * [
 20210410
 ](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20210410)
@@ -769,7 +859,7 @@ Masamichi Hosoda, with Reserved Font Name 'Harano Aji'.
 Copyright 2014-2021 Adobe (http://www.adobe.com/),
 with Reserved Font Name 'Source'.
 
-Copyright 2017 Adobe Systems Incorporated (http://www.adobe.com/),
+Copyright 2017-2021 Adobe (http://www.adobe.com/),
 with Reserved Font Name 'Source'.
 
 Source is a trademark of Adobe in the United States and/or other countries.
