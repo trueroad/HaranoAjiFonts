@@ -101,16 +101,6 @@ AJ1 への対応が取れたものを搭載します。
     + Adobe-Japan1-6 漢字グリフはすべて搭載
         + \<U+6CE8 U+E0102\> (AJ1 CID+12869) ルビ用の「注」は非搭載
             + これは AJ1 の「漢字グリフ」範囲外で漢字扱いではありません。
-        + 試験的リリースの原ノ味明朝 20211103 は
-          CID+13729
-          （U+2EA9 "⺩" / \<U+738B U+E0101\> "王󠄁" --- "王" の異体字）,
-          CID+14019
-          （\<U+5305 U+E0101\> "包󠄁" --- "包" の異体字）
-          が欠けています。
-            + これは[
-源ノ明朝 2.000 JP 版で 2 グリフが欠けている問題
-](https://github.com/adobe-fonts/source-han-serif/issues/125)
-              によるものです。
     + JIS X 0208、JIS X 0213 の全漢字グリフを搭載
 * 非漢字（ひらがな、カタカナ、英数字、記号類など）
     + JIS X 0208 横書きグリフすべて搭載
@@ -257,7 +247,22 @@ AJ1 で全角幅の CID に割り当たったため、
 + AJ1 CID+16326 U+3099 'COMBINING KATAKANA-HIRAGANA VOICED SOUND MARK'
 + AJ1 CID+16327 U+309A 'COMBINING KATAKANA-HIRAGANA SEMI-VOICED SOUND MARK'
 
-原ノ味フォント 20200524 からプロポーショナルかなを搭載しています。
+以下については、
+源ノ明朝では
+[
+縦書きグリフも横書きグリフも左上に配置されています
+](https://github.com/adobe-fonts/source-han-serif/issues/157)
+が、
+AJ1 の縦書きグリフでは右下に配置されるのが普通のようなので
+平行移動して位置調整しました（20220130 版以降）。
+源ノ角ゴシックにはこの問題はありませんので調整していません。
+
++ CID+8271 (GSUB vert/vrt2,
+  `゜` U+309C 'KATAKANA-HIRAGANA SEMI-VOICED SOUND MARK')
++ CID+8272 (GSUB vert/vrt2,
+  `゛` U+309B 'KATAKANA-HIRAGANA VOICED SOUND MARK')
+
+原ノ味フォント 20200524 からプロポーショナルかな横組み用を搭載しています。
 源ノフォントの palt に従って幅と位置を調整したものです。
 原ノ味フォント 20210102 からプロポーショナルかな縦組み用を搭載しています。
 源ノフォントの vpal に従って高さと位置を調整したものです。
@@ -325,6 +330,64 @@ futogo-b	H	HaranoAjiGothic-Medium.otf
 ## 履歴
 
 * [
+20220130
+](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20220130)
+(JP, CN, TW, KR, K1)
+    + 源ノ明朝 2.001 に対応 (JP, CN, TW, KR, K1)
+        - ベースとなる源ノ明朝を 2.000 から 2.001 に変更しました。
+        - JP: [
+源ノ明朝 2.000 JP 版で 2 グリフが欠けている問題
+](https://github.com/adobe-fonts/source-han-serif/issues/125)
+          が修正されたため
+          CID+13729
+          （U+2EA9 "⺩" / \<U+738B U+E0101\> "王󠄁" --- "王" の異体字）,
+          CID+14019
+          （\<U+5305 U+E0101\> "包󠄁" --- "包" の異体字）
+          が復活し、再び AJ16 全漢字グリフを搭載しています。
+        - JP: [
+源ノ明朝 2.000 で aj16-kanji.txt が更新されていない問題
+](https://github.com/adobe-fonts/source-han-serif/pull/123)
+          が修正されたため原ノ味独自の修正をやめました。
+        - JP: 原ノ味明朝 20211103 版からですが、
+          [
+全角ダッシュを並べてもつながらなくなっています
+](https://twitter.com/trueroad_jp/status/1460557464349253635)
+          。
+          源ノ明朝 2.000 で全角ダッシュが単独のグリフを並べても
+          つながらないタイプのものになったためです。
+          源ノ角ゴシックは以前（少なくとも最初の原ノ味のベースにした
+          源ノ角ゴシック 2.000 の頃）からそうだったので
+          原ノ味角ゴシックは最初からつながりませんでした。
+          源ノフォントはいずれも全角ダッシュを複数並べると
+          GSUB で 2 倍角や 3 倍角のダッシュに置き換えるようになったため、
+          単独のグリフをつながるタイプにするつもりはないだろうと思っています。
+          また、他の AJ1 フォントの全角ダッシュは
+          つながるものとつながらないものが混在しているようなので、
+          原ノ味フォントではつながらないものとして
+          特にグリフの加工はしていません。
+    + 原ノ味明朝のグリフ位置修正
+        - [
+源ノ明朝 2.001 で縦書き用の濁点、半濁点の位置がおかしい問題
+](https://github.com/adobe-fonts/source-han-serif/issues/157)
+          に起因する位置の問題を修正しました。
+        - CID+8271 (GSUB vert/vrt2,
+          "゜" U+309C 'KATAKANA-HIRAGANA SEMI-VOICED SOUND MARK'),
+          CID+8272 (GSUB vert/vrt2,
+          "゛" U+309B 'KATAKANA-HIRAGANA VOICED SOUND MARK')
+          を平行移動して位置調整しています。
+        - 本件は以前からあったようですが今回発見して修正したものです。
+    + バージョンアップ
+        + 源ノ明朝 2.001
+        + ttx 4.29.0
+        + Python 3.9.10
+    + グリフ数 (JP)
+        + 原ノ味明朝：17559
+          （変換 16867 ＋グリフ加工 691 ＋ .notdef 1）
+        + 原ノ味角ゴシック：17559
+          （変換 16866 ＋グリフ加工 692 ＋ .notdef 1）
+        + 上記により原ノ味明朝で変換 2 増です。
+        + 明朝とゴシックで収録 CID が同じになりました。
+* [
 20211103
 ](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20211103)
 (JP, CN, TW, KR, K1) 試験的リリース
@@ -337,6 +400,8 @@ futogo-b	H	HaranoAjiGothic-Medium.otf
         - CTAN （や TeX Live）へのアップロードはしません。
     + 源ノ明朝 2.000 に対応 (JP, CN, TW, KR, K1)
         - ベースとなる源ノ明朝を 1.001 から 2.000 に変更しました。
+        - 全角ダッシュを並べてもつながらなくなりました
+          （ゴシックは以前からつながりませんでした）。
         - JP: [
 源ノ明朝 2.000 JP 版で 2 グリフが欠けている問題
 ](https://github.com/adobe-fonts/source-han-serif/issues/125)
@@ -853,13 +918,13 @@ CID](https://twitter.com/trueroad_jp/status/1304001557822730241)
 
 ## ライセンス / LICENSE
 
-Copyright (C) 2019-2021
+Copyright (C) 2019-2022
 Masamichi Hosoda, with Reserved Font Name 'Harano Aji'.
 
 Copyright 2014-2021 Adobe (http://www.adobe.com/),
 with Reserved Font Name 'Source'.
 
-Copyright 2017-2021 Adobe (http://www.adobe.com/),
+Copyright 2017-2022 Adobe (http://www.adobe.com/),
 with Reserved Font Name 'Source'.
 
 Source is a trademark of Adobe in the United States and/or other countries.

@@ -81,6 +81,21 @@ for details.
 ## Release Notes
 
 * [
+20220130
+](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20220130)
+(JP, CN, TW, KR, K1) test release
+    + Based on SourceHanSerif 2.001 (JP, CN, TW, KR, K1)
+        + JP: CID+13729 and CID+14019 are now contained again.
+    + Update
+        + SourceHanSerif 2.001
+        + ttx 4.29.0
+        + Python 3.9.10
+    + Number of contained glyphs (JP)
+        - HaranoAjiMincho: 17559
+          (conversion 16867 + glyph processing 691 + .notdef 1)
+        - HaranoAjiGothic: 17559
+          (conversion 16866 + glyph processing 692 + .notdef 1)
+* [
 20211103
 ](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20211103)
 (JP, CN, TW, KR, K1) test release
@@ -317,13 +332,13 @@ GSUB feature](https://github.com/adobe-type-tools/Adobe-Japan1/pull/4)
 
 ## LICENSE
 
-Copyright (C) 2019-2021
+Copyright (C) 2019-2022
 Masamichi Hosoda, with Reserved Font Name 'Harano Aji'.
 
 Copyright 2014-2021 Adobe (http://www.adobe.com/),
 with Reserved Font Name 'Source'.
 
-Copyright 2017-2021 Adobe (http://www.adobe.com/),
+Copyright 2017-2022 Adobe (http://www.adobe.com/),
 with Reserved Font Name 'Source'.
 
 Source is a trademark of Adobe in the United States and/or other countries.
