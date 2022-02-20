@@ -197,6 +197,23 @@ AJ1 への対応が取れたものを搭載します。
 * `✂` AJ1 CID+12178 U+2702 'BLACK SCISSORS'
     + AJ1 CID+12176 を右90度回転
 
+以下のグリフは、他のグリフを加工したものを搭載しています
+（20220220 版以降）。
+
+* `✂` AJ1 CID+12175 U+2702 'BLACK SCISSORS'
+    + AJ1 CID+12176 を180度回転
+* `✂` AJ1 CID+12177 U+2702 'BLACK SCISSORS'
+    + AJ1 CID+12176 を270 (-90)度回転
+* `〝` AJ1 CID+12169 U+301D 'REVERSED DOUBLE PRIME QUOTATION MARK'
+    + AJ1 CID+7608 をそのままコピー
+        - 組み合わせて使う AJ1 CID+12170 は以前より存在し、
+          小塚とは微妙に角度が違いますがCID+12169, CID+12170 でほぼ線対称の
+          グリフにできたためその状態で収録します
+* `‘` AJ1 CID+12171 U+2018 'LEFT SINGLE QUOTATION MARK'
+    + AJ1 CID+12173 を270 (-90)度回転
+* `’` AJ1 CID+12172 U+2019 'RIGHT SINGLE QUOTATION MARK'
+    + AJ1 CID+12174 を270 (-90)度回転
+
 抜けているグリフのCIDにはダミーグリフ
 （.notdef と同じで四角の中に×が入ったような形）が入っています。
 そのほとんどは
@@ -329,6 +346,49 @@ futogo-b	H	HaranoAjiGothic-Medium.otf
 
 ## 履歴
 
+* [
+20220220
+](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20220220)
+(JP, CN, TW, KR, K1)
+    + 180 度 270 度（-90 度）回転・コピーによるグリフ追加 (JP)
+        + AJ1 CID+12175 (`✂` U+2702 'BLACK SCISSORS')
+          180 度回転
+          （無回転 CID+12176, 90 度回転 CID+12178 は以前より存在）
+        + AJ1 CID+12177 (`✂` U+2702 'BLACK SCISSORS')
+          270 (-90) 度回転
+          （無回転 CID+12176, 90 度回転 CID+12178 は以前より存在）
+        + AJ1 CID+12169 (`〝` U+301D 'REVERSED DOUBLE PRIME QUOTATION MARK')
+          無回転
+          （組み合わせて使う CID+12170 は以前より存在）
+        + AJ1 CID+12171 (`‘` U+2018 'LEFT SINGLE QUOTATION MARK')
+          270 (-90) 度回転
+        + AJ1 CID+12172 (`’` U+2019 'RIGHT SINGLE QUOTATION MARK')
+          270 (-90) 度回転
+    + かなに類似するプロポーショナルグリフ追加 (JP)
+        + AJ1 CID+15453 (`〃` U+3003 'DITTO MARK') 横組み
+        + AJ1 CID+15980 (`〃` U+3003 'DITTO MARK') 縦組み
+        + AJ1 CID+15981 (`〆`  U+3006 'IDEOGRAPHIC CLOSING MARK') 縦組み
+          （横組み CID+15454 は以前より存在）
+    + GSUB による変換テーブル作成を修正 (CN, K1)
+        + [
+GSUB 紐づけが重複により欠落する問題
+](https://github.com/trueroad/HaranoAjiFontsK1/issues/2)
+          があったのを修正しました。
+        + CN, K1 はこれにより収録 CID が増加しました。
+    + GSUB vert 追加の改良 (JP, CN, TW, KR)
+        + [
+グリフが存在するのに GSUB vert が無い
+](https://github.com/trueroad/HaranoAjiFontsTW/issues/1)
+      ことがあったので JP のみ CID 個別指定で実施していた vert 追加を、
+      汎用化して多言語対応しました。
+    + バージョンアップ
+        + ttx 4.29.1
+    + グリフ数 (JP)
+        + 原ノ味明朝：17567
+          （変換 16867 ＋グリフ加工 699 ＋ .notdef 1）
+        + 原ノ味角ゴシック：17567
+          （変換 16866 ＋グリフ加工 700 ＋ .notdef 1）
+        + 上記により変換 8 増です。
 * [
 20220130
 ](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20220130)

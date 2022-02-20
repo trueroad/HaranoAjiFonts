@@ -81,6 +81,21 @@ for details.
 ## Release Notes
 
 * [
+20220220
+](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20220220)
+(JP, CN, TW, KR, K1)
+    + Add glyphs by 180 and 270 (-90) degree rotation (JP)
+    + Add kana similar CIDs to pwid and pwidvert (JP)
+    + Fix making conversion table from GSUB single feature (CN, K1)
+    + Improve adding GSUB vert substituion (JP, CN, TW, KR)
+    + Update
+        + ttx 4.29.1
+    + Number of contained glyphs (JP)
+        - HaranoAjiMincho: 17567
+          (conversion 16867 + glyph processing 699 + .notdef 1)
+        - HaranoAjiGothic: 17567
+          (conversion 16866 + glyph processing 700 + .notdef 1)
+* [
 20220130
 ](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20220130)
 (JP, CN, TW, KR, K1) test release
