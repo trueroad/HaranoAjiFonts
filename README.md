@@ -214,6 +214,16 @@ AJ1 への対応が取れたものを搭載します。
 * `’` AJ1 CID+12172 U+2019 'RIGHT SINGLE QUOTATION MARK'
     + AJ1 CID+12174 を270 (-90)度回転
 
+一部の[
+回転グリフ
+](https://github.com/adobe-type-tools/Adobe-Japan1/blob/master/README-JP.md#%E5%9B%9E%E8%BB%A2%E3%82%B0%E3%83%AA%E3%83%95)
+（[
+Pre-Rotated Glyphs
+](https://github.com/adobe-type-tools/Adobe-Japan1#pre-rotated-glyphs)
+）について、
+回転前のグリフが存在するものについて90度回転させることで搭載しています
+（20230610 版以降）。
+
 抜けているグリフのCIDにはダミーグリフ
 （.notdef と同じで四角の中に×が入ったような形）が入っています。
 そのほとんどは
@@ -346,6 +356,29 @@ futogo-b	H	HaranoAjiGothic-Medium.otf
 
 ## 履歴
 
+* [
+20230610
+](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20230610)
+(JP, CN, TW, KR, K1)
+    + 一部の回転グリフを追加 (JP, CN, TW, K1)
+        - [
+半角幅回転グリフの要望
+](https://github.com/trueroad/HaranoAjiFonts/issues/10)
+          によるもの。
+        - 半角幅以外でも回転前グリフが存在するものを搭載しています。
+        - 半角幅でも回転前グリフが存在しないものは搭載していません。
+        - KR は AKR 規格に回転グリフがありません。
+    + スクリプト類などのリファクタリングを実施
+        - 生成されるフォントには特に影響ないハズです。
+    + バージョンアップ
+        - python 3.9.16
+        - ttx 4.39.4
+    + グリフ数 (JP)
+        + 原ノ味明朝：18015
+          （変換 16867 ＋グリフ加工 699 ＋回転グリフ 448 ＋ .notdef 1）
+        + 原ノ味角ゴシック：18015
+          （変換 16866 ＋グリフ加工 700 ＋回転グリフ 448 ＋ .notdef 1）
+        + 回転グリフ追加により 448 増です。
 * [
 20230223
 ](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20230223)
