@@ -81,6 +81,18 @@ for details.
 ## Release Notes
 
 * [
+20231009
+](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20231009)
+(JP, CN, TW, KR, K1)
+    + Based on SourceHanSerif 2.002 (JP, CN, TW, KR, K1)
+    + Support Adobe-GB1-6 (CN)
+    + Update
+        + SourceHanSerif 2.002
+        + Adobe-GB1-6
+        + ttx 4.43.1
+    + Number of contained glyphs (JP)
+        - No changes.
+* [
 20230610
 ](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20230610)
 (JP, CN, TW, KR, K1)
@@ -379,7 +391,7 @@ Masamichi Hosoda, with Reserved Font Name 'Harano Aji'.
 Copyright 2014-2021 Adobe (http://www.adobe.com/),
 with Reserved Font Name 'Source'.
 
-Copyright 2017-2022 Adobe (http://www.adobe.com/),
+Copyright 2017-2023 Adobe (http://www.adobe.com/),
 with Reserved Font Name 'Source'.
 
 Source is a trademark of Adobe in the United States and/or other countries.

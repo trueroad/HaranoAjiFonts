@@ -275,13 +275,13 @@ AJ1 で全角幅の CID に割り当たったため、
 + AJ1 CID+16327 U+309A 'COMBINING KATAKANA-HIRAGANA SEMI-VOICED SOUND MARK'
 
 以下については、
-源ノ明朝では
+源ノ明朝で
 [
-縦書きグリフも横書きグリフも左上に配置されています
+縦書きグリフも横書きグリフも左上に配置されている
 ](https://github.com/adobe-fonts/source-han-serif/issues/157)
-が、
-AJ1 の縦書きグリフでは右下に配置されるのが普通のようなので
-平行移動して位置調整しました（20220130 版以降）。
+という問題があったので
+原ノ味フォント 20220130 版から平行移動して位置調整していましたが、
+源ノ明朝 2.002 で修正されたため原ノ味フォント 20231009 版から調整していません。
 源ノ角ゴシックにはこの問題はありませんので調整していません。
 
 + CID+8271 (GSUB vert/vrt2,
@@ -356,6 +356,30 @@ futogo-b	H	HaranoAjiGothic-Medium.otf
 
 ## 履歴
 
+* [
+20231009
+](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20231009)
+(JP, CN, TW, KR, K1)
+    + 源ノ明朝 2.002 に対応 (JP, CN, TW, KR, K1)
+        - ベースとなる源ノ明朝を 2.001 から 2.002 に変更しました。
+        - JP: [
+源ノ明朝 2.001 で縦書き用の濁点、半濁点の位置がおかしい問題
+](https://github.com/adobe-fonts/source-han-serif/issues/157)
+          が修正されたため原ノ味フォント 20220130 で導入した修正をやめました。
+    + Adobe-GB1-6 対応 (CN)
+        - [
+Adobe-GB1-6 対応の要望
+](https://github.com/trueroad/HaranoAjiFontsCN/issues/2)
+          によるもの。
+        - これまで Adobe-GB1-5 フォントでしたが
+          Adobe-GB1-6 がリリースされたので対応しました。
+        - これにより搭載グリフ数が大幅に増えています。
+    + バージョンアップ
+        - 源ノ明朝 2.002
+        - Adobe-GB1-6
+        - ttx 4.43.1
+    + グリフ数 (JP)
+        + 増減ありません。
 * [
 20230610
 ](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20230610)
@@ -1033,7 +1057,7 @@ Masamichi Hosoda, with Reserved Font Name 'Harano Aji'.
 Copyright 2014-2021 Adobe (http://www.adobe.com/),
 with Reserved Font Name 'Source'.
 
-Copyright 2017-2022 Adobe (http://www.adobe.com/),
+Copyright 2017-2023 Adobe (http://www.adobe.com/),
 with Reserved Font Name 'Source'.
 
 Source is a trademark of Adobe in the United States and/or other countries.
