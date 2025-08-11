@@ -357,6 +357,56 @@ futogo-b	H	HaranoAjiGothic-Medium.otf
 ## 履歴
 
 * [
+20250811
+](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20250811)
+(JP, CN, TW, KR, K1)
+    + 源ノ明朝 2.003 に対応 (JP, CN, TW, KR, K1)
+        - ベースとなる源ノ明朝を 2.002 から 2.003 に変更しました。
+    + 源ノ角ゴシック 2.005 に対応 (JP, CN, TW, KR, K1)
+        - ベースとなる源ノ角ゴシックを 2.004 から 2.005 に変更しました。
+        - JP: [
+源ノ角ゴシック 2.004 でグリフ名のリストがおかしい問題
+](https://github.com/adobe-fonts/source-han-sans/issues/314)
+          が修正され、それに伴い uni4E08uE0101-JP が復活したため、
+          20210410 版で導入した原ノ味角ゴシックでの
+          CID+2510 から CID+13463 へのコピーをやめました。
+    + 重複する Unicode が単一の AI0 CID にマッピングされている場合に対応
+      (JP, CN, TW, KR, K1)
+        - [
+CN で一部のグリフが欠けている
+](https://github.com/trueroad/HaranoAjiFontsCN/issues/3)
+          に対応するため、
+          重複する Unicode が単一の AI0 CID にマッピングされていて、
+          かつ、それらの Unicode が別々の AJ1 CID にマップされている場合、
+          つまり源ノフォントではグリフが区別されていないが
+          AJ1 では区別されている場合、
+          従来通りの優先する AJ1 CID 以外にもグリフをコピーして
+          同じグリフが出るようにしました。
+        - これにより CN, TW, KR, K1 でグリフの増加や cmap テーブルにおける
+          割り当て変更が発生しています。
+        - JP では従来手動で指定していた AJ1 CID+151 へのグリフコピーが
+          自動でできるようになっただけで結果は変わりません。
+    + AJ1, AKR で定義されているスペースの追加 (JP, KR)
+        - AJ1, AKR で定義されているスペースのグリフで
+          未搭載だったものを追加しました。
+        - JP ではイタリック体と AAT 互換目的のスペースが該当しますが、
+          AJ1 CID+20958 フリーダイヤル記号については従来通り搭載していません。
+        - CN, TW, K1 では定義されているスペースは既にすべて搭載済です。
+    + バージョンアップ
+        - 源ノ明朝 2.003
+        - 源ノ角ゴシック 2.005
+        - ttx 4.59.0
+        - g++ 13.4
+    + グリフ数 (JP)
+        - 原ノ味明朝：18022
+          （変換 16867 ＋グリフ加工 705 ＋回転グリフ 449 ＋ .notdef 1）
+        - 原ノ味角ゴシック：18022
+          （変換 16867 ＋グリフ加工 705 ＋回転グリフ 449 ＋ .notdef 1）
+        - 原ノ味角ゴシックの uni4E08uE0101-JP 復活により変換 +1 グリフ加工 -1
+          で増減±ゼロ
+        - スペースのグリフ追加によりグリフ加工 +6
+          （イタリック 1、AAT 互換目的 5）、それにより回転グリフ +1
+* [
 20231009
 ](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20231009)
 (JP, CN, TW, KR, K1)
@@ -1051,13 +1101,13 @@ CID](https://twitter.com/trueroad_jp/status/1304001557822730241)
 
 ## ライセンス / LICENSE
 
-Copyright (C) 2019-2023
+Copyright (C) 2019-2025
 Masamichi Hosoda, with Reserved Font Name 'Harano Aji'.
 
-Copyright 2014-2021 Adobe (http://www.adobe.com/),
+Copyright 2014-2025 Adobe (http://www.adobe.com/),
 with Reserved Font Name 'Source'.
 
-Copyright 2017-2023 Adobe (http://www.adobe.com/),
+Copyright 2017-2024 Adobe (http://www.adobe.com/),
 with Reserved Font Name 'Source'.
 
 Source is a trademark of Adobe in the United States and/or other countries.

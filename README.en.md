@@ -81,6 +81,27 @@ for details.
 ## Release Notes
 
 * [
+20250811
+](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20250811)
+(JP, CN, TW, KR, K1)
+    + Based on SourceHanSerif 2.003 (JP, CN, TW, KR, K1)
+    + Based on SourceHanSans 2.005 (JP, CN, TW, KR, K1)
+    + Add handling for cases where duplicate Unicode code points are
+      mapped to a single AI0 CID (JP, CN, TW, KR, K1)
+    + Add space glyphs defined in AJ1 and AKR (JP, KR)
+    + Update
+        + SourceHanSerif 2.003
+        + SourceHanSans 2.005
+        + ttx 4.59.0
+        + g++ 13.4
+    + Number of contained glyphs (JP)
+        - HaranoAjiMincho: 18022
+          (conversion 16867 + glyph processing 705 + pre-rotated 449 +
+          .notdef 1)
+        - HaranoAjiGothic: 18022
+          (conversion 16867 + glyph processing 705 + pre-rotated 449 +
+          .notdef 1)
+* [
 20231009
 ](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20231009)
 (JP, CN, TW, KR, K1)
@@ -103,11 +124,11 @@ for details.
         + ttx 4.39.4
     + Number of contained glyphs (JP)
         - HaranoAjiMincho: 18015
-          (conversion 16867 + glyph processing 699 + pre-rotated 448
-          + .notdef 1)
+          (conversion 16867 + glyph processing 699 + pre-rotated 448 +
+          .notdef 1)
         - HaranoAjiGothic: 18015
-          (conversion 16866 + glyph processing 700 + pre-rotated 448
-          + .notdef 1)
+          (conversion 16866 + glyph processing 700 + pre-rotated 448 +
+          .notdef 1)
 * [
 20230223
 ](https://github.com/trueroad/HaranoAjiFonts/releases/tag/20230223)
@@ -385,13 +406,13 @@ GSUB feature](https://github.com/adobe-type-tools/Adobe-Japan1/pull/4)
 
 ## LICENSE
 
-Copyright (C) 2019-2023
+Copyright (C) 2019-2025
 Masamichi Hosoda, with Reserved Font Name 'Harano Aji'.
 
-Copyright 2014-2021 Adobe (http://www.adobe.com/),
+Copyright 2014-2025 Adobe (http://www.adobe.com/),
 with Reserved Font Name 'Source'.
 
-Copyright 2017-2023 Adobe (http://www.adobe.com/),
+Copyright 2017-2024 Adobe (http://www.adobe.com/),
 with Reserved Font Name 'Source'.
 
 Source is a trademark of Adobe in the United States and/or other countries.
